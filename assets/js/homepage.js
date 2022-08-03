@@ -41,6 +41,7 @@ var getUserRepos = function(user) {
             //Notice this '.catch()' getting chained onto the end of the '.then()' method
             alert("Unable to connect to GitHub")
         })
+    };
 
 var displayRepos = function(repos, searchTerm) {
     //check if API returned any repos
@@ -82,7 +83,7 @@ var displayRepos = function(repos, searchTerm) {
                 "<i class='fas fa-times status-icon icon-danger'></i>" + repos[i].open_issues_count + " issue(s)";
         } else {
             statusEl.innerHTML = "<i class='fas fa-check-square status-icon icon-success'></i>";
-        }
+        };
 
         //append to container
         repoEl.appendChild(statusEl);
@@ -90,7 +91,7 @@ var displayRepos = function(repos, searchTerm) {
         //append container to DOM
         repoContainerEl.appendChild(repoEl);
 
-    }
+    };
 }
 
-userFormEl.addEventListener("submit", formSubmitHandler);
+userFormEl.addEventListener("submit",formSubmitHandler);
